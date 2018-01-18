@@ -1,0 +1,291 @@
+body {
+	background-color: #f5f5f5;
+	font-family: 'Roboto', sans-serif;
+	min-width: 800px;
+	max-width: 1400px;
+}
+.container {
+	min-height: calc(100vh - 100px);
+}
+/*шапка*/
+header {
+	background-image: url(img/header.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: white;
+	height: 200px;
+}
+header img {
+	float: left;
+	margin-left: 15px;
+	background-color: white; 
+	margin-top: 140px;
+}
+/*выпадающее меню*/
+ul {
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style: none;
+}
+ul:after {
+ 	display: block;
+ 	content: "";
+ 	clear: both;
+ 	float: none;
+}
+ul.menu > li {
+	width: 100px;
+	position: relative;
+	float: left;
+	height: 20px;
+	text-align: center;
+	font-size: 15px;
+	margin-left: 10px;
+	margin-top: 155px;
+}
+ul.menu > li > a {
+	display: block;
+	background-color: white;
+	color: black;
+	text-decoration: none;	
+	padding: 10px;
+}
+ul.menu > li > a:hover {
+	text-decoration: underline;
+	background: #848b75;
+	color: white;
+}
+ul.submenu {
+	display: none;
+	position: absolute;
+	width: 100px;
+	top: 37px;
+	left: 0;
+	background-color: white;	
+}
+ul.submenu > li {
+	display: block;
+}
+ul.submenu > li > a {
+	display: block;	
+	padding: 10px;
+	color: black;
+	background-color: white;
+	text-decoration: none;
+}
+ul.submenu > li > a:hover {
+	text-decoration: underline;
+	background: #848b75;
+	color: white;	
+}
+ul.menu > li:hover > ul.submenu {
+	display: block;
+}
+/*главная страница*/
+.content {
+	display: flex;
+	justify-content: center;	
+}
+.fig {
+	display: flex;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+.photo {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 10px;	
+}
+.text p {
+	color: #3f3e3f;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*об авторе*/
+.about {
+	display: flex;
+	justify-content: center;
+}
+.about ul {      /*ссылки*/
+	margin-top: 30px;
+}
+.about li a {  
+	text-align: left;
+	width: 600px;
+	font-size: 15px;
+	line-height: 30px;
+	color: #484343;
+    font-weight: 400;
+    text-decoration: none;
+}
+.about li a:hover {
+	color: #8bc250;
+	text-decoration: underline;
+}
+.artist p {
+	display: flex;
+	justify-content: center;
+	text-align: left;
+	width: 600px;
+	font-size: 15px;
+	line-height: 30px;
+	color: #484343;
+    font-weight: 400; 
+}  
+/*превью плюс краткое описание*/
+#headline h1 {
+	width: 100%;
+	background-color: #eaeaea;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20; 
+}
+figure {
+	width: 140px;
+	float: left;
+}
+
+figcaption a {
+	text-align: center;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 16px;
+	margin-top: 30px;
+	color: #707070;
+	text-decoration: none;
+}
+figcaption a:hover {
+	color: #8bc250;
+	text-decoration: underline;
+}
+/*подробное описание*/
+#img a img {
+	margin-top: 20px;
+	float: left;
+	margin-left: 50px;
+	outline: 1px solid #8aac68; 
+}
+#img a:hover img {
+	outline-color: #f5f5f5; 
+}
+#description {
+	margin-top: 15px;
+	margin-left: 430px;
+}
+#description p:first-letter {
+	font-family:  "Times New Roman", serif;
+	color: black;
+	font-size: 22px;
+}
+#description p {
+	color: #484343;
+	text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+} 
+#description  li {
+	list-style: url(img/star1.png);
+	padding-left: 5px;
+	color: #737373;
+	font-size: 14px;
+	font-weight: 350;
+	line-height: 15px;
+	text-align: left;
+}
+#buy input {
+	color: black;
+	font-style: normal;
+}
+#buy > input:hover {
+	background-color: #d1def6; 
+}
+#buy > input:focus {
+	background-color: #c5eeb7;
+}
+/*страница контактов форма*/
+.contacts {
+	margin-top: 10px;
+	width: 100%;
+	height: 400px;
+}
+input:focus {
+	outline: none;
+}
+input {
+	display: block;
+	font-size: 15px;
+	font-style: oblique;
+	text-align: left;
+	color: black;
+	line-height: 16px;
+	text-transform: capitalize;
+}
+.email input {
+	color: #8aac68;
+	background-color: #f6fbfb;
+	text-transform: lowercase;
+}	
+.but input {
+	color: black;
+	font-size: 13px; 
+	text-align: left;
+	font-style: normal;
+}
+.but input:hover {
+	background-color: #d1def6;
+}
+textarea {
+	resize: both;
+	font-size: 15px;
+	font-style: oblique;
+	text-align: left;
+	color: black;
+	line-height: 16px;
+	font-family: 'Roboto', sans-serif;
+}
+/*контакты*/
+#adress {
+	float: left;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	color: #484343;
+	font-weight: 300;
+	font-size: 13px; 
+	line-height: 16px;
+	text-align: left;
+}
+#adress h4 {
+	font-size: 15px;
+}
+.social {
+	float: left;
+	margin-left: 50px;
+	margin-top: 8px;
+}
+/*подвал*/
+footer {
+	width: 100%;
+	height: 100px;
+	background-color: #848b75;
+	text-align: right;
+    color: #d1d2d0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 100px;
+    clear: both;
+    margin-bottom: 10px;
+}
+footer p {
+	margin-right: 25px;
+}
+
